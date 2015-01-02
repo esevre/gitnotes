@@ -36,7 +36,7 @@ There are two ways to start a Git project. You can (1) check it out from a repos
 I will first go through how to do this from the command line. If you have never used the command line please see my "Getting Started with the Terminal" notes.
 
 First I will create a directory called \texttt{mygitrepo} and on my system the directory location looks like:
-\begin{lstlisting}
+\begin{lstlisting}[language=bash]
 /Users/esevre/Dropbox/Notes/git/mygitrepo
 \end{lstlisting}
 
@@ -63,6 +63,14 @@ git init
 
 Now typing \texttt{ls -la} allows us to see that there is now a directory called \texttt{.git} hidden. This \texttt{.git} directory will keep track of all our git changes that we monitor along the way.
 
+Once we have a file in our directory, there are two steps to starting the git repositor. First we need to add the file to the repo, this simply tells the repo to keep track of the file. Then we need to commit our file, this is basically saying "hey git, write down the file the way it appears now!" When we commit we do need to add a comment describing what we are doing with the commit.
+
+So I'm going to add these notes to my git repo, so I copy them to the directory, add them to the git, then commit the file with the following commands:
+\begin{lstlisting}[language=bash]
+cp ../*.tex .
+git add *.tex
+git commit -m 'initial setup with starting tex file'
+\end{lstlisting}
 
 
 
