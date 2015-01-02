@@ -84,6 +84,25 @@ git status
 
 
 
+\section*{Commit'in to a Remote Repo}
+Here we will look at how to connect to a remote repo like Github or Bitbucket. 
+
+I've created a repo at Github and Bitbucket, so now I need to tell my project about these repos and how to push to them to the respective repo.
+
+We start by looking at what remote repos our project is connected to, we do this with the following command:
+\begin{lstlisting}[language=bash]
+git remote
+\end{lstlisting}
+
+We don't have a remote repo yet so this shouldn't output anything yet. So we will add a repo at Bitbucket and Github. You only need a repo at one of these locations, but I will show you how to manage both repos if that is what you wish to do.
+
+
+\begin{lstlisting}[language=bash]
+git remote add github_origin https://github.com/esevre/gitnotes.git
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+git remote add bitbucket_origin https://esevre@bitbucket.org/esevre/gitnotes.git
+\end{lstlisting}
 
 
 
