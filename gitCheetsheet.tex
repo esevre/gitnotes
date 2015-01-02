@@ -1,0 +1,77 @@
+\documentclass[a4paper]{spie} %% Use article or spie for the document class
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%% This is for SI Units:
+\usepackage{siunitx}
+
+%% For graphics:
+\usepackage{graphicx}
+
+
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{black}
+}
+\author{Erik O. D. Sevre}
+\title{Git'in Started with Git}
+
+\authorinfo{This document is created by Erik Sevre: E-mail: esevre@gmail.com}
+
+\begin{document}
+\maketitle
+
+\section*{Git'in Started with Git}
+
+There are two ways to start a Git project. You can (1) check it out from a repository, or you can (2) create your own. I will look at both approaches. I will start by creating my own, then describe how to check it in to a one of the popular Git repos online.
+
+\subsection*{Creating a local Git Repository}
+
+I will first go through how to do this from the command line. If you have never used the command line please see my "Getting Started with the Terminal" notes.
+
+First I will create a directory called \texttt{mygitrepo} and on my system the directory location looks like:
+\begin{lstlisting}
+/Users/esevre/Dropbox/Notes/git/mygitrepo
+\end{lstlisting}
+
+Currently this directory is empty so I will start by initializing this as a simple git repository.
+
+Add your name and email to the global git config file on your machine.
+\begin{lstlisting}[language=bash]
+git config --global user.name "Erik Sevre"
+git config --global user.email "esevre@gmail.com"
+\end{lstlisting}
+
+Or if you want to check the current username and email address in the global config file you can use the following commands:
+\begin{lstlisting}[language=bash]
+git config --global user.name
+git config --global user.email
+\end{lstlisting}
+
+
+\subsection{Init'in a Git Repository}
+To create a git repo in our directory described above we simply need to run the following command from the command line in the desired directory
+\begin{lstlisting}[language=bash]
+git init
+\end{lstlisting}
+
+Now typing \texttt{ls -la} allows us to see that there is now a directory called \texttt{.git} hidden. This \texttt{.git} directory will keep track of all our git changes that we monitor along the way.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
