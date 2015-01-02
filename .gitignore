@@ -1,3 +1,4 @@
+# we can ignore the following files  since they are used just for building the pdf file
 *.aux
 *.log
 *.gz
