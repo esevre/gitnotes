@@ -105,6 +105,35 @@ git remote add bitbucket_origin https://esevre@bitbucket.org/esevre/gitnotes.git
 \end{lstlisting}
 
 
+\section*{Command List}
+\begin{lstlisting}[language=bash]
+git config --global user.name "Erik Sevre"
+git config --global user.email "esevre@gmail.com"
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+git init
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+git add file1 file2 file*
+git commit -m 'initial setup with starting tex file'
+\end{lstlisting}
+Adding future files, the \texttt{-a} flag automatically adds modified files to be updated
+\begin{lstlisting}[language=bash]
+git commit -a -m 'Commiting a future change'
+\end{lstlisting}
+Add a gitignore file
+\begin{lstlisting}[language=bash]
+git add .gitignore
+git status
+\end{lstlisting}
+\begin{lstlisting}[language=bash]
+git remote
+git remote -v
+git remote add github_origin https://github.com/esevre/gitnotes.git
+
+\end{lstlisting}
+
+
 
 
 \end{document}
