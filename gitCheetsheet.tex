@@ -33,6 +33,25 @@ There are two ways to start a Git project. You can (1) check it out from a repos
 
 \subsection*{Creating a local Git Repository}
 
+To create a git repo in our directory described above we simply need to run the following command from the command line in the desired directory
+\begin{lstlisting}[language=bash]
+git init
+\end{lstlisting}
+
+\subsection*{Git'in Started with a Stored Repository}
+
+If you want to copy a project that is already stored in a git repository on a website this is simple to do and we call this "cloning". So when we clone a repository we make a copy of the repo on our local machine. Later we will learn how to apply those changes back to the original.
+
+\begin{lstlisting}[language=bash]
+git clone https://somesite.com/somerepo.git
+\end{lstlisting}
+
+
+\subsection*{Adding files and making changes}
+
+Now typing \texttt{ls -la} allows us to see that there is now a directory called \texttt{.git} hidden. This \texttt{.git} directory will keep track of all our git changes that we monitor along the way.
+
+
 I will first go through how to do this from the command line. If you have never used the command line please see my "Getting Started with the Terminal" notes.
 
 First I will create a directory called \texttt{mygitrepo} and on my system the directory location looks like:
@@ -55,13 +74,6 @@ git config --global user.email
 \end{lstlisting}
 
 
-\subsection{Init'in a Git Repository}
-To create a git repo in our directory described above we simply need to run the following command from the command line in the desired directory
-\begin{lstlisting}[language=bash]
-git init
-\end{lstlisting}
-
-Now typing \texttt{ls -la} allows us to see that there is now a directory called \texttt{.git} hidden. This \texttt{.git} directory will keep track of all our git changes that we monitor along the way.
 
 Once we have a file in our directory, there are two steps to starting the git repositor. First we need to add the file to the repo, this simply tells the repo to keep track of the file. Then we need to commit our file, this is basically saying "hey git, write down the file the way it appears now!" When we commit we do need to add a comment describing what we are doing with the commit.
 
@@ -102,35 +114,6 @@ git remote add github_origin https://github.com/esevre/gitnotes.git
 \end{lstlisting}
 \begin{lstlisting}[language=bash]
 git remote add bitbucket_origin https://esevre@bitbucket.org/esevre/gitnotes.git
-\end{lstlisting}
-
-
-\section*{Command List}
-\begin{lstlisting}[language=bash]
-git config --global user.name "Erik Sevre"
-git config --global user.email "esevre@gmail.com"
-\end{lstlisting}
-\begin{lstlisting}[language=bash]
-git init
-\end{lstlisting}
-\begin{lstlisting}[language=bash]
-git add file1 file2 file*
-git commit -m 'initial setup with starting tex file'
-\end{lstlisting}
-Adding future files, the \texttt{-a} flag automatically adds modified files to be updated
-\begin{lstlisting}[language=bash]
-git commit -a -m 'Commiting a future change'
-\end{lstlisting}
-Add a gitignore file
-\begin{lstlisting}[language=bash]
-git add .gitignore
-git status
-\end{lstlisting}
-\begin{lstlisting}[language=bash]
-git remote
-git remote -v
-git remote add github_origin https://github.com/esevre/gitnotes.git
-
 \end{lstlisting}
 
 
